@@ -4,10 +4,18 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
+    <div className="app-container">
+      <header className="login-container">
+        <img src={logo} className="logo" alt="logo" />
+        <h1>Example Login Screen</h1>
+        <p>Getting started with Green.</p>
+        <form>
+        <label>Email Address</label>
+        <input type="text"></input>
+        <input type="checkbox"></input>
+        <input type="submit" value="Sign In"></input>
+        </form>
+        
       </header>
     </div>
   );
