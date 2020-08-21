@@ -7,15 +7,18 @@ function App() {
     <div className="app-container">
       <header className="login-container">
         <img src={logo} className="logo" alt="logo" />
-        <h1>Example Login Screen</h1>
+
+        <div className="title-container">
+        <h1>Example login screen</h1>
         <p>Getting started with Green.</p>
+        </div>
         
         <form className="login-form"> 
           <label>Email Address</label>
-          <input type="text"></input>
+          <input className="login-textbox" type="text"></input>
 
-          <div>
-          <input className="login-checkbox" type="checkbox" id="device" name="device"></input>
+          <div className="login-checkbox">
+          <input type="checkbox" id="device" name="device"></input>
           <label for="device">Remember this device</label>
           </div>
         
