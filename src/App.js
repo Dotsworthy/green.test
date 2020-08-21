@@ -9,11 +9,17 @@ function App() {
         <img src={logo} className="logo" alt="logo" />
         <h1>Example Login Screen</h1>
         <p>Getting started with Green.</p>
-        <form>
-        <label>Email Address</label>
-        <input type="text"></input>
-        <input type="checkbox"></input>
-        <input type="submit" value="Sign In"></input>
+        
+        <form className="login-form"> 
+          <label>Email Address</label>
+          <input type="text"></input>
+
+          <div>
+          <input className="login-checkbox" type="checkbox" id="device" name="device"></input>
+          <label for="device">Remember this device</label>
+          </div>
+        
+          <input className="login-button" type="submit" value="Sign In"></input>
         </form>
         
       </header>
