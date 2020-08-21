@@ -1,7 +1,7 @@
-@import url(/cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css
-);
-
-$base-font: "gotham";
+@font-face {
+  font-family: "Gotham-Thin";
+  src: "fonts/GothanLight.ttf";
+}
 
 * {
   margin: 0;
@@ -9,10 +9,10 @@ $base-font: "gotham";
 }
 
 body {
-  font-family: $base-font;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F2ECF1;
+  background-color: #F2F2F2;
+  font-family: "Gotham-Thin", sans-serif;
 }
 
 .app-container {
@@ -23,11 +23,16 @@ body {
 }
 
 .login-container {
-  padding: 30px;
+  min-height: 275px;
+  min-width: 350px;
+  padding: 25px 30px;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(230,225,230,1);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(230,225,230,1);
+  box-shadow: 0px 0px 3px 0px rgba(230,225,230,1);
 }
 
 .title-container {
@@ -35,16 +40,20 @@ body {
 }
 
 
-.login-checkbox {
-  padding: 0 0 30px 0;
+.submit-container {
+  padding: 30px 0 0 0;
 }
 
 .login-button {
   border: 1px solid #f2f2f2;
   border-radius: 5px;
-  width: 25%;
+  width: 100px;
   background-color: white;
-  height: 30px;
+  height: 40px;
+  font-size: 12px;
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(230,225,230,1);
+  -moz-box-shadow: 0px 0px 1px 0px rgba(230,225,230,1);
+  box-shadow: 0px 0px 1px 0px rgba(230,225,230,1);
 }
 
 .login-form {
@@ -56,11 +65,42 @@ body {
 .login-textbox {
   border: 1px solid #f2f2f2;
   border-radius: 5px;
-  height: 30px;
+  height: 40px;
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(230,225,230,1);
+  -moz-box-shadow: 0px 0px 1px 0px rgba(230,225,230,1);
+  box-shadow: 0px 0px 1px 0px rgba(230,225,230,1);
+}
+
+.login-checkbox {
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+
+  label {
+    padding-left: 5px;
+  }
 }
 
 .logo {
   height: 25px;
   width: auto;
   padding: 15px 0px;
+}
+
+.email {
+  padding: 10px 0px 10px 3px;
+}
+
+label {
+  font-size: 13px;
+}
+
+p {
+  color: grey;
+  font-size: 14.5px;
+  padding-top: 5px;
+}
+
+h1 {
+  font-size: 26px;
 }

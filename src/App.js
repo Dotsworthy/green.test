@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo-r.svg';
+import logo from './public/logo-r.svg';
 import './App.css';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         </div>
         
         <form className="login-form"> 
-          <label>Email Address</label>
+          <label className="email">Email Address</label>
           <input className="login-textbox" type="text"></input>
 
           <div className="login-checkbox">
@@ -22,7 +22,9 @@ function App() {
           <label for="device">Remember this device</label>
           </div>
         
+        <div className="submit-container">
           <input className="login-button" type="submit" value="Sign In"></input>
+        </div>
         </form>
         
       </header>
