@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="app-container">
       <header className="login-container">
+
         <img src={logo} className="logo" alt="logo" />
 
         <div className="title-container">
@@ -18,11 +19,11 @@ function App() {
           <input className="login-textbox" type="text"></input>
 
           <div className="login-checkbox">
-          <input type="checkbox" id="device" name="device"></input>
-          <label for="device">Remember this device</label>
+          <input type="checkbox" id="device" name="device"/>
+          <label className="checkbox-label" for="device">Remember this device</label>
           </div>
         
-        <div className="submit-container">
+        <div className="login-submit">
           <input className="login-button" type="submit" value="Sign In"></input>
         </div>
         </form>
