@@ -37,7 +37,20 @@ $onerotate: rotate(45deg) scale(1);
   -o-transition: $transition;
 }
 
-
+%zero-rotate-options {
+  transform: $zerorotate;
+  -webkit-transform: $zerorotate;
+  -moz-transform: $zerorotate;
+  -ms-transform: $zerorotate;
+  -o-transform: $zerorotate;
+}
+%one-rotate-options {
+  transform: $onerotate;
+  -webkit-transform: $onerotate;
+  -moz-transform: $onerotate;
+  -ms-transform: $onerotate;
+  -o-transform: $onerotate;
+}
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -121,9 +134,7 @@ body {
   border-radius: 2.5px;
   border: solid #009BFF;
   border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(0deg) scale(0);
-  -ms-transform: rotate(0deg) scale(0);
-  transform: rotate(0deg) scale(0);
+  @extend %zero-rotate-options;
   @extend %animation-options;
 } 
 
@@ -134,9 +145,7 @@ body {
 }  
 
 .checkbox-label input:checked ~ .checkbox-custom::after {
-  -webkit-transform: rotate(45deg) scale(1);
-  -ms-transform: rotate(45deg) scale(1);
-  transform: rotate(45deg) scale(1);
+  @extend %one-rotate-options;
   left: 3.2px;
   top: 0.7px;
   width: 3.7px;
@@ -193,4 +202,3 @@ p {
 h1 {
   font-size: 26px;
 }
-
