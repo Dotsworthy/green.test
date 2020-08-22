@@ -18,8 +18,11 @@ function App() {
           <input className="login-textbox" type="text"></input>
 
           <div className="login-checkbox">
-          <input type="checkbox" id="device" name="device"/>
-          <label className="checkbox-label" for="device">Remember this device</label>
+          <label class="checkbox-label">
+          <input type="checkbox"/>
+          <span class="checkbox-custom"></span>      
+          </label>
+          <label>Remember this device</label>
           </div>
         
         <div className="login-submit">

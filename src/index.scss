@@ -55,17 +55,6 @@ body {
   padding: 15px 0 40px 0;
 }
 
-
-.login-submit {
-  padding: 30px 0 0 0;
-}
-
-.login-button {
-  @extend %inputs;
-  width: 100px;
-  background-color: white;
-}
-
 .login-form {
   display: flex;
   flex-direction: column;
@@ -76,17 +65,112 @@ body {
   @extend %inputs;
 }
 
+.login-checkbox:after {
+  clear: both;
+  display: flex;
+  content: "";
+}
+
 .login-checkbox {
   padding: 10px 0px;
   display: flex;
   align-items: center;
 
-  .checkbox-label {
-    padding-left: 5px;
-    font-size: 12px;
-  } 
+  label {
+    font-size: 11px;
+  }
 }
 
+.checkbox-label {
+  display: block;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 24px;
+  height: 12px;
+  width: 20px;
+  clear: both;
+}
+
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-label .checkbox-custom{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 11px;
+  width: 11px;
+  background-color: transparent;
+  border-radius: 3px;
+  border: 1px solid grey;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+.checkbox-label .checkbox-custom::after {
+  position: absolute;
+  content: "";
+  left: 12px;
+  top: 12px;
+  height: 0px;
+  width: 0px;
+  border-radius: 3px;
+  border: solid #009BFF;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(0deg) scale(0);
+  -ms-transform: rotate(45deg) scale(0);
+  transform: rotate(0deg) scale(0);
+  opacity: 1;
+  transition: all 0.3s ease-out;
+  	-webkit-transition: all 0.3s ease-out;
+  	-moz-transition: all 0.3s ease-out;
+  	-ms-transition: all 0.3s ease-out;
+  	-o-transition: all 0.3s ease-out;
+} 
+
+.checkbox-label input:checked ~ .checkbox-custom {
+  background-color: #009BFF;
+  border-radius: 3px;
+  -webkit-transform: rotate(0deg) scale(1);
+  -ms-transform: rotate(0deg) scale(1);
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+  border: 1px solid #009BFF;
+}  
+
+.checkbox-label input:checked ~ .checkbox-custom::after {
+  -webkit-transform: rotate(45deg) scale(1);
+  -ms-transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1);
+  opacity: 1;
+  left: 3.3px;
+  top: 1px;
+  width: 3px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 1.2px 1.2px 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.login-submit {
+  padding: 30px 0 0 0;
+
+  .login-button {
+    @extend %inputs;
+    width: 100px;
+    background-color: white;
+  }
+  
+}
 
 .logo {
   height: 25px;
@@ -96,6 +180,7 @@ body {
 
 .email {
   padding: 10px 0px;
+  color: rgb(73, 72, 72);
 }
 
 label {
