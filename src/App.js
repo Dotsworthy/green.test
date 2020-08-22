@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './public/logo-r.svg';
 
 function App() {
+
   return (
     <div className="app-container">
       <header className="login-container">
@@ -15,7 +16,7 @@ function App() {
         
         <form className="login-form"> 
           <label className="email">Email Address</label>
-          <input className="login-textbox" type="text"></input>
+          <input className="login-textbox" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address"></input>
 
           <div className="login-checkbox">
           <label class="checkbox-label">
